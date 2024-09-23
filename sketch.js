@@ -13,6 +13,7 @@ function setup() {
 
   gui = createGui();
   diameterSlider = createSlider("Diameter", 200,10, 100, 20,10, 100 );
+degSlider = createSlider("Rotation",200,40,100,20,0,180);
 }
 
 function draw() {
@@ -30,7 +31,7 @@ circle(100, 200, diameterSlider.val);
 
 push();
 translate(200,200);
-rotate (radians(deg));
+rotate (radians(degSlider.val));
 rect(0,0,60,60);
 pop();
 
